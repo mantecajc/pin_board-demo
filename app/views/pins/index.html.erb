@@ -1,3 +1,6 @@
 <% @pins.each do |pin| %>
+  <% if pin.image.attached? %>
+    <%= image_tag pin.image, style: "width: 300px; display: block" %>
+  <% end %>
   <h2><%= link_to pin.title, pin %></h2>
 <% end %>
